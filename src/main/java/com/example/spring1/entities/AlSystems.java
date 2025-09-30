@@ -1,13 +1,21 @@
 package com.example.spring1.entities;
 
-import java.util.Set;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
+import java.util.Set;
+@Entity
 public class AlSystems {
 
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long alSystemsId;
     private String type;
     private boolean available;
-    private Set<Skills> skills;
+    //private Set<Skills> skills;
 
     // Constructeurs
     public AlSystems() {}
@@ -16,7 +24,7 @@ public class AlSystems {
         this.alSystemsId = alSystemsId;
         this.type = type;
         this.available = available;
-        this.skills = skills;
+        //this.skills = skills;
     }
 
     // Getters et Setters
@@ -43,7 +51,7 @@ public class AlSystems {
     public void setAvailable(boolean available) {
         this.available = available;
     }
-
+/*
     public Set<Skills> getSkills() {
         return skills;
     }
@@ -51,5 +59,7 @@ public class AlSystems {
     public void setSkills(Set<Skills> skills) {
         this.skills = skills;
     }
+
+ */
 
 }

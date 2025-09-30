@@ -7,7 +7,7 @@ import java.util.Set;
 public class Calls
 {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long callsId ;
     private LocalDateTime callTime ;
     private String callnumber ;
